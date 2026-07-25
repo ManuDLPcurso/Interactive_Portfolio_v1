@@ -1,0 +1,236 @@
+body {
+  margin: 0;
+
+  background: #0d1117;
+
+  font-family: "JetBrains Mono", monospace;
+}
+
+.terminal {
+  width: min(1100px, 95%);
+
+  height: 85vh;
+
+  margin: auto;
+  margin-top: 40px;
+
+  background: #161b22;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+.terminal-header {
+  height: 45px;
+
+  background: #21262d;
+
+  display: flex;
+
+  flex-shrink: 0;
+
+  align-items: center;
+
+  justify-content: center;
+
+  position: relative;
+
+  font-family: "Ubuntu", sans-serif;
+
+  color: white;
+}
+
+.buttons {
+  position: absolute;
+
+  left: 15px;
+
+  display: flex;
+
+  gap: 10px;
+
+  color: black;
+}
+
+.buttons span {
+  width: 19px;
+
+  height: 19px;
+
+  border-radius: 50%;
+  
+  text-align: center;
+}
+
+.red {
+  background: #ff5f57;
+}
+
+.yellow {
+  background: #febc2e;
+}
+
+.green {
+  background: #28c840;
+}
+
+.banner {
+  white-space: pre;
+
+  color: white;
+
+  font-size: 10px;
+
+  line-height: 1;
+}
+
+.terminal-body {
+  flex: 1;
+
+  overflow-y: auto;
+
+  padding: 30px 30px 0px 30px;
+
+  font-family: "JetBrains Mono", monospace;
+
+  color: white;
+
+  font-size: 16px;
+}
+
+.green-text {
+  color: #33ff66;
+  font-weight: 600;
+}
+
+.cyan-text {
+  color: #4dd0e1;
+  font-weight: 600;
+}
+
+.yellow-text {
+  color: #ffd54a;
+  font-weight: 600;
+}
+
+.grey-text {
+  color: #8aa08a;
+  font-weight: 600;
+}
+
+.history-item{
+  margin-bottom: 80px;
+}
+
+.terminal-history{
+    margin-top: 40px;
+}
+
+.command {
+  margin-bottom: 20px;
+}
+
+.prompt {
+  position: sticky;
+  bottom: 0;
+
+  padding: 5px 0px 10px 0px;  
+  
+  background: #161b22;
+  border-top: 1px solid #21262d;
+}
+
+.cursor {
+  display: inline-block;
+
+  width: 10px;
+
+  height: 15px;
+
+  background: white;
+
+  margin-left: 4px;
+
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  40% {
+    opacity: 0;
+  }
+}
+
+.terminal-input {
+  background: transparent;
+
+  border: none;
+
+  outline: none;
+
+  box-shadow: none;
+
+  color: white;
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: inherit;
+
+  padding: 0;
+
+  margin: 0;
+
+  flex: 1;
+
+  caret-color: transparent;
+}
+
+.output {
+    white-space: pre-line;
+}
+
+@media (max-width: 768px) {
+
+  body {
+    background: #161b22;
+  }
+
+
+  .terminal {
+
+    width: 100%;
+    height: 100vh;
+
+    margin: 0;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+  }
+
+   .terminal-title {
+    display: none;
+  }
+
+  .terminal-body {
+    padding: 20px 20px 0px 20px;
+  }
+
+  .banner {
+  white-space: pre;
+
+  color: white;
+
+  font-size: 4px;
+
+  line-height: 1;
+  }
+
+}
