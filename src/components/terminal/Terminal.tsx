@@ -27,7 +27,6 @@ const Terminal: React.FC = () => {
 
     requestAnimationFrame(() => {
       lastCommandRef.current?.scrollIntoView({
-        behavior: "smooth",
         block: "start",
       });
     });
