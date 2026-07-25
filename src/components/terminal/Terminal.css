@@ -220,10 +220,11 @@ body {
   }
 
   .banner {
-    color:white;
+  color:white;
   white-space:pre;
   overflow-x:auto;
   margin:0;
   line-height:1;
+  font-size: 5px;
   }
 }
