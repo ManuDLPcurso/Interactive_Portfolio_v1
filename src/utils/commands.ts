@@ -258,17 +258,19 @@ export function executeCommand(command: string): TerminalLine[] {
       ];
 
     case "clear":
-      return `
-        Available commands:
-        help
-        whoami
-        skills
-        projects
-        contact
-        clear
-        `;
+      return [ 
+        {
+          text: `Command not found: ${command}`,
+          color: "#ffffff",
+        }
+    ];
 
     default:
-      return `Command not found: ${command}`;
+      return [ 
+        {
+          text: `Command not found: ${command}`,
+          color: "#c41515",
+        }
+    ];
   }
 }
