@@ -13,6 +13,11 @@ const Terminal: React.FC = () => {
   const lastCommandRef = useRef<HTMLDivElement>(null);
 
   const handleCommand = () => {
+    if (command.trim() === "clear") {
+      setHistory([]);
+      setCommand("");
+      return;
+    }
     const output = executeCommand(command);
 
     setHistory((prev) => [

@@ -230,7 +230,7 @@ export function executeCommand(command: string): TerminalLine[] {
           color: "#33ff66",
         },
         {
-          text: "    Ejecuta la demo del ERP.",
+          text: "Ejecuta la demo del gestor de almacenes.",
           color: "#ffffff",
         },
         {
@@ -241,7 +241,7 @@ export function executeCommand(command: string): TerminalLine[] {
           color: "#33ff66",
         },
         {
-          text: "    Abre mi perfil de GitHub.",
+          text: "Abre mi perfil de GitHub.",
           color: "#ffffff",
         },
         {
@@ -252,18 +252,13 @@ export function executeCommand(command: string): TerminalLine[] {
           color: "#33ff66",
         },
         {
-          text: "    Lista todos mis repositorios públicos.",
+          text: "Lista todos mis repositorios públicos.",
           color: "#ffffff",
         },
       ];
 
     case "clear":
-      return [ 
-        {
-          text: `Command not found: ${command}`,
-          color: "#ffffff",
-        }
-    ];
+      return [];
 
     default:
       return [ 
