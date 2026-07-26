@@ -1,0 +1,15 @@
+.technology-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.technology-icon {
+  font-size: 18px;
+}
+
+.technology-name {
+  color: #ffffff;
+  font-size: 15px;
+}

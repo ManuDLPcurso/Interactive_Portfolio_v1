@@ -1,9 +1,10 @@
 import "./Terminal.css";
 import { portfolioBanner } from "../../assets/ascii/PortfolioTitle";
 import { getLastLogin } from "../../utils/date";
-import { executeCommand } from "../../utils/commands";
+import { executeCommand } from "../../terminal/executeCommand";
 import { useState, useRef } from "react";
-import { HistoryItem } from "../../types/terminal";
+import { HistoryItem } from "../../terminal/terminal.types";
+import OutputRenderer from "../../terminal/components/OutputRenderer";
 
 const Terminal: React.FC = () => {
   const [command, setCommand] = useState("");
@@ -45,11 +46,11 @@ const Terminal: React.FC = () => {
         </span>
 
         <div className="buttons">
-          <span className="red">x</span>
+          <span className="red"></span>
 
-          <span className="yellow">-</span>
+          <span className="yellow"></span>
 
-          <span className="green">□</span>
+          <span className="green"></span>
         </div>
       </div>
 
@@ -88,19 +89,7 @@ const Terminal: React.FC = () => {
               </p>
 
               <div className="output">
-                {item.output.map((line, i) => (
-                  <p key={i} style={{ color: line.icon ? "#ffffff" : line.color }}>
-                    {line.icon && (
-                      <span
-                        className="terminal-icon"
-                        style={{ color: line.color }}
-                      >
-                        {line.icon}
-                      </span>
-                    )}
-                    {line.text}
-                  </p>
-                ))}
+                <OutputRenderer output={item.output} />
               </div>
             </div>
           ))}

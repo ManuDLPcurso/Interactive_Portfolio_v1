@@ -1,0 +1,25 @@
+.project-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.project-content {
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+.project-techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.project-label{
+    color: #febc2e
+}
+

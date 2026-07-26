@@ -60,9 +60,9 @@ body {
 }
 
 .buttons span {
-  width: 19px;
+  width: 14px;
 
-  height: 19px;
+  height: 14px;
 
   border-radius: 50%;
 
@@ -82,15 +82,15 @@ body {
 }
 
 .banner {
-white-space: pre;
-  line-height: 1;
-  letter-spacing: 0;
-  font-kerning: none;
-  font-variant-ligatures: none;
-  overflow: hidden;
-  font-size: 8px;
-  margin-bottom: 20px;
+  white-space: pre;
+
   color: #8b949e;
+
+  font-size: 10px;
+
+  line-height: 1;
+
+  margin-bottom: 30px;
 }
 
 .terminal-body {
@@ -128,7 +128,7 @@ white-space: pre;
 }
 
 .history-item {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 .terminal-history {
