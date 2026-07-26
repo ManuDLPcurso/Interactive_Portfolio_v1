@@ -82,17 +82,15 @@ body {
 }
 
 .banner {
-  white-space: pre;
-
-  color: #8b949e;
-
-  font-size: 8px;
-
+white-space: pre;
   line-height: 1;
-
-  margin-bottom: 30px;
-
+  letter-spacing: 0;
+  font-kerning: none;
+  font-variant-ligatures: none;
   overflow: hidden;
+  font-size: 8px;
+  margin-bottom: 20px;
+  color: #8b949e;
 }
 
 .terminal-body {
