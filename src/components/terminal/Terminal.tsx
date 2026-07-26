@@ -13,7 +13,7 @@ const Terminal: React.FC = () => {
   const lastCommandRef = useRef<HTMLDivElement>(null);
 
   const handleCommand = () => {
-    if (command.trim() === "clear") {
+    if (command.trim().toLowerCase() === "clear") {
       setHistory([]);
       setCommand("");
       return;
@@ -84,12 +84,20 @@ const Terminal: React.FC = () => {
                 <span className="cyan-text">@portfolio</span>
                 <span className="yellow-text">:~</span>
                 <span className="green-text">$ </span>
-                {item.command}
+                <span className="green-text">{item.command}</span>
               </p>
 
               <div className="output">
                 {item.output.map((line, i) => (
-                  <p key={i} style={{ color: line.color }}>
+                  <p key={i} style={{ color: line.icon ? "#ffffff" : line.color }}>
+                    {line.icon && (
+                      <span
+                        className="terminal-icon"
+                        style={{ color: line.color }}
+                      >
+                        {line.icon}
+                      </span>
+                    )}
                     {line.text}
                   </p>
                 ))}

@@ -1,7 +1,23 @@
 import { TerminalLine } from "../types/terminal";
+import {
+  SiReact,
+  SiAngular,
+  SiTypescript,
+  SiJavascript,
+  SiHtml5,
+  SiCss,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiSupabase,
+  SiGit,
+  SiGithub,
+  SiIonic,
+} from "react-icons/si";
+import { FaDatabase, FaPlug } from "react-icons/fa6";
 
 export function executeCommand(command: string): TerminalLine[] {
-  switch (command.trim()) {
+  switch (command.trim().toLowerCase()) {
     case "help":
       return [
         {
@@ -105,27 +121,38 @@ export function executeCommand(command: string): TerminalLine[] {
           color: "#febc2e",
         },
         {
-          text: "> React",
+          icon: <SiReact />,
+          text: " React",
           color: "#61DAFB",
         },
         {
-          text: "> Angular",
+          icon: <SiAngular />,
+          text: " Angular",
           color: "#FF4D6D",
         },
         {
-          text: "> TypeScipt",
+          icon: <SiIonic />,
+          text: " Ionic",
+          color: "#5CA8FF",
+        },
+        {
+          icon: <SiTypescript />,
+          text: " TypeScipt",
           color: "#4DA3FF",
         },
         {
-          text: "> JavaScript",
+          icon: <SiJavascript />,
+          text: " JavaScript",
           color: "#FFD93D",
         },
         {
-          text: "> HTML5",
+          icon: <SiHtml5 />,
+          text: " HTML5",
           color: "#FF6B3D",
         },
         {
-          text: "> CSS3",
+          icon: <SiCss />,
+          text: " CSS3",
           color: "#4DA6FF",
         },
         {
@@ -137,11 +164,13 @@ export function executeCommand(command: string): TerminalLine[] {
           color: "#febc2e",
         },
         {
-          text: "> Node.js + Express",
+          icon: <SiNodedotjs />,
+          text: " Node.js + Express",
           color: "#6CC24A",
         },
         {
-          text: "> REST API",
+          icon: <FaPlug />,
+          text: " REST API",
           color: "#FF7B72",
         },
 
@@ -154,15 +183,18 @@ export function executeCommand(command: string): TerminalLine[] {
           color: "#febc2e",
         },
         {
-          text: "> MongoDB",
+          icon: <SiMongodb />,
+          text: " MongoDB",
           color: "#4DB33D",
         },
         {
-          text: "> SQL",
+          icon: <FaDatabase />,
+          text: " SQL",
           color: "#5CA8FF",
         },
         {
-          text: "> Supabase",
+          icon: <SiSupabase />,
+          text: " Supabase",
           color: "#3FE38A",
         },
         {
@@ -174,11 +206,13 @@ export function executeCommand(command: string): TerminalLine[] {
           color: "#febc2e",
         },
         {
-          text: "> Git",
+          icon: <SiGit />,
+          text: " Git",
           color: "#FF7A45",
         },
         {
-          text: "> GitHub",
+          icon: <SiGithub />,
+          text: " GitHub",
           color: "#F0F6FC",
         },
       ];
@@ -261,11 +295,11 @@ export function executeCommand(command: string): TerminalLine[] {
       return [];
 
     default:
-      return [ 
+      return [
         {
           text: `Command not found: ${command}`,
           color: "#c41515",
-        }
-    ];
+        },
+      ];
   }
 }
