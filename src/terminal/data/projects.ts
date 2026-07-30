@@ -1,19 +1,4 @@
 import type { Project } from "../terminal.types";
-import {
-  SiAngular,
-  SiCss,
-  SiExpress,
-  SiGit,
-  SiGithub,
-  SiHtml5,
-  SiIonic,
-  SiJavascript,
-  SiMongodb,
-  SiNodedotjs,
-  SiReact,
-  SiSupabase,
-  SiTypescript,
-} from "react-icons/si";
 import { TECHNOLOGIES } from "./technologies";
 
 export const projects: Project[] = [
@@ -38,6 +23,9 @@ export const projects: Project[] = [
       "Cálculo automático de la distancia entre clientes y almacenes disponibles.",
       "Arquitectura cliente-servidor basada en React, Node.js, Express y MongoDB.",
     ],
+    links: "https://warehouse-manager-omega.vercel.app/",
+    github: "https://github.com/ManuDLPcurso/Warehouse_Manager.git",
+    github2: "https://github.com/ManuDLPcurso/Warehouse_Manager_Backend.git",
   },
   {
     id: "portfolio",
@@ -54,5 +42,7 @@ export const projects: Project[] = [
       "Diseño responsive.",
       "Acceso a proyectos, tecnologías y contacto mediante comandos personalizados.",
     ],
+    links: "https://interactive-portfolio-v1.vercel.app/",
+    github: "https://github.com/ManuDLPcurso/Interactive_Portfolio_v1.git",
   },
 ];

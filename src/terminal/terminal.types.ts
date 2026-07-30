@@ -13,6 +13,9 @@ export interface Project {
   description: string;
   technologies: Technology[];
   features: string[];
+  links: string;
+  github: string;
+  github2?: string;
 }
 
 export interface Technology {
