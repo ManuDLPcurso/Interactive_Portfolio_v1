@@ -8,7 +8,7 @@ interface ProjectItemProps {
 
 const ProjectItem = ({ project }: ProjectItemProps) => {
   const [expanded, setExpanded] = useState(false);
-
+  const [showIframe, setShowIframe] = useState(false);
   return (
     <div>
       <div
@@ -47,21 +47,38 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
           </div>
           <p className="project-label">Características:</p>
           {project.features.map((feature) => (
-            <p key={feature}>✓ {feature}</p>        
+            <p key={feature}>✓ {feature}</p>
           ))}
-          <p className="project-label">Enlaces:</p>
-          <p className="project-links">DEMO</p>
 
-          <iframe className="project-iframe"
-             
-              src={project.links}
-            />
-          <p>Haz click para abrir el proyecto → 
-            <a className="project-links" href={project.links} target="_blank">Warehous Manager</a>
-            </p>
-          <p>Haz click para abrir repositorio de GitHub → <a className="project-links" href={project.github} target="_blank">FRONTEND - </a><a className="project-links" href={project.github2} target="_blank">BACKEND </a></p>
+          <p className="project-label">Enlaces:</p>
+
+          <p
+            className="project-links"
+            onClick={() => setShowIframe(!showIframe)}
+            style={{ cursor: "pointer", userSelect: "none" }}
+          >
+            DEMO {showIframe ? "[-]" : "[+]"}
+          </p>
+
+          {showIframe && (
+            <iframe className="project-iframe" src={project.links} />
+          )}
+          <p>
+            Haz click para abrir el proyecto →
+            <a className="project-links" href={project.links} target="_blank">
+              Warehous Manager
+            </a>
+          </p>
+          <p>
+            Haz click para abrir repositorio de GitHub →{" "}
+            <a className="project-links" href={project.github} target="_blank">
+              FRONTEND -{" "}
+            </a>
+            <a className="project-links" href={project.github2} target="_blank">
+              BACKEND{" "}
+            </a>
+          </p>
         </div>
-        
       )}
     </div>
   );
