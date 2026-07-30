@@ -13,6 +13,7 @@ export interface Project {
   description: string;
   technologies: Technology[];
   features: string[];
+  about: string;
   links: string;
   github: string;
   github2?: string;

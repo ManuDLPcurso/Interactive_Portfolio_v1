@@ -51,31 +51,33 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
           ))}
 
           <p className="project-label">Enlaces:</p>
-
+          <a className="project-links" href={project.about} target="_blank">📄 Información del proyecto</a>
           <p
             className="project-links"
             onClick={() => setShowIframe(!showIframe)}
             style={{ cursor: "pointer", userSelect: "none" }}
           >
-            DEMO {showIframe ? "[-]" : "[+]"}
+            {showIframe ? "[-]" : "[+]"} DEMO 
           </p>
 
           {showIframe && (
             <iframe className="project-iframe" src={project.links} />
           )}
           <p>
-            Haz click para abrir el proyecto →
+            Haz click para abrir el proyecto →  
             <a className="project-links" href={project.links} target="_blank">
-              Warehous Manager
+              {project.title}
             </a>
           </p>
           <p>
-            Haz click para abrir repositorio de GitHub →{" "}
+            Haz click para abrir repositorio de GitHub →
+            <br /> 
             <a className="project-links" href={project.github} target="_blank">
-              FRONTEND -{" "}
+              {project.github}
             </a>
+            <br />
             <a className="project-links" href={project.github2} target="_blank">
-              BACKEND{" "}
+              {project.github2}
             </a>
           </p>
         </div>
