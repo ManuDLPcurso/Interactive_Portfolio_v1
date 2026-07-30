@@ -19,6 +19,13 @@ export interface Project {
   github2?: string;
 }
 
+export interface Contact {
+  email: string;
+  github: string;
+  linkedin: string;
+  cv: string;
+}
+
 export interface Technology {
   name: string;
   color: string;

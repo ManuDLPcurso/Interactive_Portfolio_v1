@@ -20,6 +20,11 @@ export function executeCommand(command: string): CommandResult {
         type: "skills",
       };
 
+    case "contact":
+      return {
+        type: "contact",
+      };  
+
     default:
       return {
         type: "text",

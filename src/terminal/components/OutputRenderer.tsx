@@ -6,6 +6,7 @@ import type {
   TextOutput as TextOutputType,
 } from "../terminal.types";
 import SkillsPanel from "./skills/SkillsPanel";
+import ContactPanel from "./contact/ContactPanel"
 
 interface OutputRendererProps {
   output: CommandResult;
@@ -21,6 +22,9 @@ const OutputRenderer: React.FC<OutputRendererProps> = ({ output }) => {
 
     case "skills"  :
       return <SkillsPanel />
+
+    case "contact"  :
+      return <ContactPanel />
 
     default:
       return null;
